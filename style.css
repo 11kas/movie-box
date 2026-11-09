@@ -90,3 +90,109 @@ body {
 .cta-btn:hover {
     background-color: #00c025;
 }
+.third {
+    padding: 40px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the <ul> horizontally */
+}
+/* Container for the poster row */
+.third ul {
+  display: flex;
+  list-style: none;
+  gap: 20px; /* Space between posters */
+  padding: 0;
+  margin: 0;
+  overflow-x: auto; /* Allows scrolling on smaller screens if they overflow */
+  align-items: center;
+}
+
+/* Individual list item */
+.third li {
+  flex: 0 0 auto;
+  width: 150px; /* Adjust poster width as needed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Poster image styling */
+.third li img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3; /* Standard movie poster ratio */
+  object-fit: cover;
+  border-radius: 6px; /* Smooth rounded corners */
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Optional Letterboxd-style hover effect */
+.third li:hover {
+  transform: translateY(-6px);
+}
+
+/* Main Container */
+.fourth {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Title Styling */
+#word1 {
+  color: #00e054;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout for Cards */
+.information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 16px; /* Space between cards */
+}
+
+/* Individual Card Styling */
+.fourth .info {
+  background-color: #2c3440; /* Letterboxd dark card background */
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #9ab;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: background-color 0.2s ease;
+}
+
+.fourth .info:hover {
+  background-color: #9c3725; /* Lighter shade on hover */
+}
+
+/* Icon Styling */
+.fourth .icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  object-fit: contain;
+  /* Use CSS filter if your icons are black and you want them white/gray */
+  filter: brightness(0) invert(0.8); 
+}
+
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+  .information {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .information {
+    grid-template-columns: 1fr;
+  }
+}
